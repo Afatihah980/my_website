@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Welcome to Nurain Fatihah's personal website. In this website, there are several information about Fatiha." />
+  <meta name="keywords" content="Nurain Fatihah, personal information" />
+  <meta name="author" content="Nurain Fatihah" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website - Profile</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #0B3D91; /* dark blue text */
+      margin: 0;
+      padding: 0;
+      background-image: url('IMAGE/backpp2.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    #header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(11, 61, 145, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(11, 61, 145, 0.5);
+      margin: 20px;
+      color: #E0E7FF;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #CCE0FF;
+      text-shadow: 1px 1px 2px rgba(0, 0, 50, 0.7);
+    }
+
+    h2 {
+      font-family: 'Rubik', sans-serif;
+      color: #CCE0FF; /* light blue header */
+      text-align: center;
+      margin: 24px 0;
+      font-weight: 700;
+      font-size: 2.4rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 50, 0.8);
+    }
+
+    .centered-info, .fun-facts {
+      text-align: justify; /* Justify text */
+      margin: 20px auto; /* Center the container */
+      max-width: 600px; /* Set a max width for better readability */
+    }
+
+    p {
+      margin: 0 0 16px auto;
+      line-height: 1.6;
+      background-color: rgba(204, 224, 255, 0.3); /* subtle translucent light blue background */
+      border-radius: 6px;
+      padding: 10px 16px;
+      box-shadow: 0 2px 6px rgba(11, 61, 145, 0.2);
+      color: #0B3D91;
+      font-weight: 500;
+    }
+
+    mark {
+      background-color: #CCE0FF; /* light blue highlight background */
+      font-weight: 600;
+      padding: 0 6px;
+      color: #0B3D91; /* dark blue text */
+      border-radius: 4px;
+      text-decoration: none;
+      box-shadow: 0 1px 3px rgba(11, 61, 145, 0.4);
+    }
+
+    /* Fun Facts Section */
+    .fun-facts ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .fun-facts li {
+      background-color: rgba(204, 224, 255, 0.3);
+      border-radius: 6px;
+      padding: 10px;
+      margin: 10px 0;
+      box-shadow: 0 2px 6px rgba(11, 61, 145, 0.2);
+    }
+
+    /* Navigation Bar - MATCHED TO FIRST PAGE */
+    #nav {
+      background-color: rgba(11, 61, 145, 0.9);
+      padding: 12px 0;
+      box-shadow: 0 4px 12px rgba(11, 61, 145, 0.6);
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-btn {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #CCE0FF;
+      background-color: transparent;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      text-decoration: none;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+      box-shadow: 0 2px 6px rgba(11, 61, 145, 0.3);
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .nav-btn:hover,
+    .nav-btn:focus {
+      background-color: #CCE0FF;
+      color: #0B3D91;
+      border-color: #0B3D91;
+      box-shadow: 0 4px 14px rgba(11, 61, 145, 0.6);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .nav-btn.active {
+      background-color: #0B3D91;
+      color: #CCE0FF;
+      border-color: #CCE0FF;
+      box-shadow: 0 4px 14px rgba(204, 224, 255, 0.8);
+      cursor: default;
+      transform: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        max-width: 100%;
+        padding: 8px 12px;
+      }
+
+      mark {
+        padding: 0 4px;
+      }
+
+      .nav-list {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-btn {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #0B3D91;
+      background: rgba(204,224,255,0.7);
+      padding: 20px 0;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Welcome to My Personal Website</h1>
+  </div>
+
+  <nav id="nav" aria-label="Main Navigation">
+    <ul class="nav-list">
+      <li><a href="index.html" class="nav-btn">Home</a></li>
+      <li><a href="aboutme.html" class="nav-btn">About Me</a></li>
+      <li><a href="education.html" class="nav-btn">Education</a></li>
+      <li><a href="family.html" class="nav-btn">Family</a></li>
+      <li><a href="hobby.html" class="nav-btn">Hobbies</a></li>
+      <li><a href="gallery.html" class="nav-btn">Gallery</a></li>
+      <li><a href="contact.html" class="nav-btn">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h2>Profile Information</h2>
+  <div class="centered-info">
+    <p><b><mark>Name:</mark></b> Nurain Fatihah Binti Zulkhairi</p>
+    <p><b><mark>Short Name:</mark></b> Fatihah</p>
+    <p><b><mark>Matric number:</mark></b> 2023889304</p>
+    <p><b><mark>Class:</mark></b> KCDIM144 4A</p>
+    <p><b><mark>Date of birth:</mark></b> 04 May 2005</p>
+    <p><b><mark>Hometown:</mark></b> Johor</p>
+  </div>
+
+  <h2>Fun Facts About Me</h2>
+  <div class="fun-facts">
+    <ul>
+      <li>Enjoys and loves to read crime novels.</li>
+      <li>Hate painting but has a collection of her artwork.</li>
+      <li>A big fan of outdoor activities, especially hiking.</li>
+      <li>Married to Tengku Adrean Ruiz but my boyfrienf is Ollie Bearman.</li>
+      <li>I am triplet, so basically I am the oldest and youngest.</li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; Nurain Fatihah 2025. All rights reserved Nurain Fatihah Binti Zulkhairi.
+    <p>Recommended to use Chrome for a better version of this website.</p>
+    <p>Last updated: 21 May 2025.</p>   
+  </footer>
+</body>
+</html>

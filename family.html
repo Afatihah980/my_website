@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Nurain Fatihah's family timetable with images and descriptions." />
+  <meta name="keywords" content="Nurain Fatihah, family timetable, personal website" />
+  <meta name="author" content="Nurain Fatihah" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Family Timetable - Nurain Fatihah</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('IMAGE/backpp2.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #CCE0FF;
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(10, 30, 70, 0.85);
+      background-blend-mode: overlay;
+    }
+
+    /* Navigation Bar */
+    #nav {
+      background-color: rgba(11, 61, 145, 0.9);
+      padding: 12px 0;
+      box-shadow: 0 4px 12px rgba(11, 61, 145, 0.6);
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 24px auto 20px auto;
+      width: 100%;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #CCE0FF;
+      background-color: transparent;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      text-decoration: none;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+      box-shadow: 0 2px 6px rgba(11, 61, 145, 0.3);
+      cursor: pointer;
+      display: inline-block;
+    }
+    .nav-btn:hover,
+    .nav-btn:focus {
+      background-color: #CCE0FF;
+      color: #0B3D91;
+      border-color: #0B3D91;
+      box-shadow: 0 4px 14px rgba(11, 61, 145, 0.6);
+      transform: translateY(-3px);
+      outline: none;
+    }
+    .nav-btn.active {
+      background-color: #0B3D91;
+      color: #CCE0FF;
+      border-color: #CCE0FF;
+      box-shadow: 0 4px 14px rgba(204, 224, 255, 0.8);
+      cursor: default;
+      transform: none;
+    }
+
+    /* Container */
+    .container {
+      background: rgba(10, 25, 70, 0.85);
+      border-radius: 12px;
+      width: 700px;
+      max-width: 95vw;
+      box-shadow: 0 0 30px rgba(20, 60, 160, 0.8);
+      padding: 30px 40px;
+      margin-bottom: 40px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #CCE0FF;
+      text-shadow: 1px 1px 6px rgba(0, 60, 140, 0.9);
+      font-family: 'Poppins', sans-serif;
+    }
+    .timetable-entry {
+      display: flex;
+      background-color: #103070;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0, 50, 130, 0.9);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      overflow: hidden;
+    }
+    .timetable-entry:hover {
+      box-shadow: 0 6px 25px rgba(0, 100, 220, 0.95);
+      transform: scale(1.03);
+      cursor: pointer;
+    }
+    .member-image {
+      flex-shrink: 0;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 0 0 0 12px;
+      border-right: 3px solid #4da6ff;
+      box-shadow: 0 0 20px rgba(77, 166, 255, 0.8);
+      background-color: #cde1ff;
+      transition: box-shadow 0.3s ease;
+    }
+    .timetable-entry:hover .member-image {
+      box-shadow: 0 0 30px rgba(30, 120, 255, 1);
+    }
+    .member-details {
+      padding: 15px 25px;
+      color: #CCE0FF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+    }
+    .member-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      color: #aad4ff;
+      text-shadow: 1px 1px 5px rgba(0, 40, 110, 0.9);
+      font-family: 'Poppins', sans-serif;
+    }
+    .member-relation {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+      color: #85b1ff;
+      text-shadow: 1px 1px 4px rgba(0, 30, 100, 0.75);
+      font-family: 'Poppins', sans-serif;
+    }
+    .member-description {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #c2d9ff;
+      font-weight: 400;
+      text-shadow: 0 0 4px rgba(0, 20, 60, 0.7);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #0B3D91;
+      background-color: rgba(204, 224, 255, 0.7);
+      padding: 15px 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 900px;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 4px 12px rgba(11, 61, 145, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        width: 100%;
+        padding: 20px;
+      }
+      .timetable-entry {
+        flex-direction: column;
+        align-items: center;
+      }
+      .member-image {
+        width: 130px;
+        height: 130px;
+        border-radius: 12px 12px 0 0;
+        border-right: none;
+        border-bottom: 3px solid #4da6ff;
+        margin-bottom: 15px;
+      }
+      .member-details {
+        padding: 0 15px 15px;
+        text-align: center;
+      }
+      .nav-list {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-btn {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav id="nav" aria-label="Main Navigation">
+    <ul class="nav-list">
+      <li><a href="index.html" class="nav-btn">Home</a></li>
+      <li><a href="aboutme.html" class="nav-btn">About Me</a></li>
+      <li><a href="education.html" class="nav-btn">Education</a></li>
+      <li><a href="family.html" class="nav-btn active">Family</a></li>
+      <li><a href="hobby.html" class="nav-btn">Hobbies</a></li>
+      <li><a href="gallery.html" class="nav-btn">Gallery</a></li>
+      <li><a href="contact.html" class="nav-btn">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container" role="main">
+    <h1>Meet & Greet with My Family</h1>
+
+    <!-- Generation 1: Grandparents -->
+    <div class="timetable-entry" tabindex="0" aria-label="My Lovely Atuk - Grandfather">
+      <img src="IMAGE/K1.png" alt="My Lovely Atuk" class="member-image" />
+      <div class="member-details">
+        <h2 class="member-name">My Lovely Atuk</h2>
+        <p class="member-relation">Grandfather</p>
+        <p class="member-description">
+          The cherished family patriarch whose wisdom and kindness unite everyone.
+        </p>
+      </div>
+    </div>
+
+    <div class="timetable-entry" tabindex="0" aria-label="Sweetest Person - Grandmother">
+      <img src="IMAGE/K2.png" alt="Grandmother" class="member-image" />
+      <div class="member-details">
+        <h2 class="member-name">My Nenek</h2>
+        <p class="member-relation">Grandmother</p>
+        <p class="member-description">
+          The loving grandmother, keeper of family traditions and warmth.
+        </p>
+      </div>
+    </div>
+
+    <!-- Generation 2: Parents -->
+    <div class="timetable-entry" tabindex="0" aria-label="Ayah - Father">
+      <img src="IMAGE/K3.png" alt="Ayah" class="member-image" />
+      <div class="member-details">
+        <h2 class="member-name">Ayah</h2>
+        <p class="member-relation">Father</p>
+        <p class="member-description">
+          The strong and caring father who supports and guides the family.
+        </p>
+      </div>
+    </div>
+
+    <div class="timetable-entry" tabindex="0" aria-label="Ibu - Mother">
+      <img src="IMAGE/K4.png" alt="Ibu" class="member-image" />
+      <div class="member-details">
+        <h2 class="member-name">Ibu</h2>
+        <p class="member-relation">Mother</p>
+        <p class="member-description">
+          The loving mother and heart of the home, always nurturing with warmth.
+        </p>
+      </div>
+    </div>
+
+    <!-- Generation 3: Children -->
+    <div class="timetable-entry" tabindex="0" aria-label="1. Alif Hakimi - Child">
+      <img src="IMAGE/K5.png" alt="Alif Hakimi" class="member-image" />
+      <div class="member-details">
+        <h2 class="member-name">1. Alif Hakimi</h2>
+        <p class="member-relation">Child</p>
+        <p class="member-description">
+          Eldest child aka my annoying twin bro with a curious mind and adventurous spirit.
+        </p>
+      </div>
+    </div>
+
+    <div class="timetable-entry" tabindex="0" aria-label="2. Myself - Child">
+      <img src="IMAGE/K6.png" alt="Myself" class="member-image" />
+      <div class="member-details">
+        <h2 class="member-name">2. Myself</h2>
+        <p class="member-relation">Child</p>
+        <p class="member-description">
+          The center of attention in the siblings, eager to learn and grow every day.
+        </p>
+      </div>
+    </div>
+
+    <div class="timetable-entry" tabindex="0" aria-label="3. Nurain Najihah - Child">
+      <img src="IMAGE/K7.png" alt="Nurain Najihah" class="member-image" />
+      <div class="member-details">
+        <h2 class="member-name">3. Nurain Najihah</h2>
+        <p class="member-relation">Child</p>
+        <p class="member-description">
+          My other half, she is full of creativity and kindness.
+        </p>
+      </div>
+    </div>
+
+    <div class="timetable-entry" tabindex="0" aria-label="Little Sister - Child">
+      <img src="IMAGE/K8.png" alt="Little Sister" class="member-image" />
+      <div class="member-details">
+        <h2 class="member-name">Little Sister</h2>
+        <p class="member-relation">Child</p>
+        <p class="member-description">
+          The youngest sibling, full of energy and sweet charm.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; Nurain Fatihah 2025. All rights reserved Nurain Fatihah Binti Zulkhairi.<br />
+    Recommended to use Chrome for a better version of this website.<br />
+    Last updated: 21 May 2025.
+  </footer>
+
+</body>
+</html>
